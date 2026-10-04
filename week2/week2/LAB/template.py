@@ -40,12 +40,12 @@ while True:
     print(f"  RECORD CHECK  -  {label}")
     print("=" * 34)
 
-    print(f"Label : {label}")
-    print(f"Value : {value}")
-    print(f"Limit : {limit}")
+    print(f"Label      : {label}")
+    print(f"Value      : {value}")
+    print(f"Limit      : {limit}")
     print(f"Difference : {difference:>+10.2f}")
     print(f"Percentage : {percent:>10.2f}%")
-    print(f"Status : {status}")
+    print(f"Status     : {status}")
 
     print("=" * 34)
 #total over limit
