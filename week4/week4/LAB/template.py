@@ -47,7 +47,6 @@ def print_report(label, value, limit, difference, percent, status):
 
 
 
-
 def load_records(path):
     """Reads records from a file and returns a list of dictionaries."""
 
@@ -75,10 +74,6 @@ def load_records(path):
             records.append(record)
 
     return records
-
-
-
-
 
 # Start the counter at zero
 over_limit_count = 0
