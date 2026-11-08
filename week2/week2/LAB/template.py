@@ -13,33 +13,42 @@ Delete these instructions as you replace them with your code.
 """
 
 # ==================================================================== 
+# Start the OVER LIMIT counter
 overLimit = 0
 
+# Keep checking records until the user types quit
 while True:
-    label = input("Enter a Label (name,hostname or an IP) or quite to stop: ")  
+    # Ask the user to enter a label
+    label = input("Enter a Label (name,hostname or an IP) or quit to stop: ")  
+     # Stop the loop if the user enters quit
     if label == "quit":
         break   
 
+    # Ask for the value and limit
     value = float(input("Enter Number: "))
     limit = float(input("Enter Second Number: "))
 
+    # Calculate the difference and percentage
     difference = value - limit
     percent = (value / limit) * 100
 
+    # Decide the status based on the percentage
     if percent >= 100:
         status = "OVER LIMIT"
     elif percent >= 90:
         status = "WARNING"
     else:
         status = "OK"
+
+    # Count records that are OVER LIMIT
     if status == "OVER LIMIT":
         overLimit += 1
-
+    # Display the report
     print()
     print("=" * 34)
     print(f"  RECORD CHECK  -  {label}")
     print("=" * 34)
-
+    # Display the record details
     print(f"Label      : {label}")
     print(f"Value      : {value}")
     print(f"Limit      : {limit}")
@@ -48,13 +57,8 @@ while True:
     print(f"Status     : {status}")
 
     print("=" * 34)
-#total over limit
+# Display the total number of OVER LIMIT records
 print(f"Total OVER LIMIT : {overLimit}")
 
 
-# ==========================================================================
-# 5. Before you finish:
-#
-#    [ ] Run it three times with different numbers
-#    [ ] Run it with a total of 0 and note the error (do not fix it yet)
-#    [ ] Check every variable name says what it holds
+
