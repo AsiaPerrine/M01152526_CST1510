@@ -11,7 +11,7 @@ Run it:   python template.py
 Work through the numbered sections in order. Each one tells you what it must do.
 Delete these instructions as you replace them with your code.
 """
-""""Clculate and print difference and percentage"""
+""""Calculate and print difference and percentage"""
 # ask the user to enter a label and two numbers
 label = input("Enter a Label: ")
 first = float(input("Enter a Number:"))
